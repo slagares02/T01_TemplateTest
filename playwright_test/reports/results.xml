@@ -1,0 +1,6 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="19.196">
+<testsuite name="tests\rqres.ts" timestamp="1687031588866" hostname="" tests="1" failures="0" skipped="0" time="18.091" errors="0">
+<testcase name="Cuesnta ahorro Given / When / Then" classname="[Chrome] › tests\rqres.ts:11:5 › Cuesnta ahorro › Given / When / Then" time="18.091">
+</testcase>
+</testsuite>
+</testsuites>
