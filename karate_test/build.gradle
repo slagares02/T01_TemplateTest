@@ -1,25 +1,20 @@
 plugins {
     id 'java'
 }
-//group 'co.com.bancolombia'
-//version '1.0-SNAPSHOT'
 
+//Version variabilization
 ext {
     karateVersion = "1.0.1"
     cucumberReportVersion = "5.6.1"
-    //connectionDbVersion = "4.2.1"
 }
 
 repositories {
     mavenCentral()
-
-    //maven { url  "https://artifactory.apps.bancolombia.com/maven-bancolombia"}
 }
 
 dependencies {
     testImplementation "com.intuit.karate:karate-junit5:${karateVersion}"
     testImplementation "net.masterthought:cucumber-reporting:${cucumberReportVersion}"
-    //testImplementation group: "co.com.bancolombia.certificacion", name: "conexion-bd", version: "${connectionDbVersion}"
 }
 
 test {

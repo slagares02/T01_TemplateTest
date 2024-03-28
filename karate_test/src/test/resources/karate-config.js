@@ -3,15 +3,15 @@ function fn() {
     karate.configure('readTimeout', 5000);
     karate.configure('ssl', true);
 
-    var baseUrl = karate.properties['baseUrl'] || 'https://reqres.in'
-    var service = karate.properties['service'] || '/api'
+    var urlBase = karate.properties['baseUrl'] || 'https://#{base}#' || 'https://reqres.in/'
+    var namespace = karate.properties['namespace'] || 'api/#{service}#' || '/api/users'
 
     return {
-        api:{
-             urlBase: baseUrl + '/'+service
+        api: {
+            localUrlBase: 'https://reqres.in//api/users'//urlBase + '/'+namespace
         },
-        path:{
-            userList: '/users?page=2',
+        path: {
+            listUser: '/?page=2',
         }
     };
 }

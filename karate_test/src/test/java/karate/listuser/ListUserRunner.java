@@ -7,5 +7,5 @@ public class ListUserRunner {
     private static final String PROJECT = "list_user";
 
     @Karate.Test
-    Karate RegistrationPetition() {return Karate.run(PROJECT).relativeTo(getClass());}
+    Karate ListUserRunner() {return Karate.run(PROJECT).relativeTo(getClass());}
 }

@@ -1,0 +1,4 @@
+Gradle:
+- Edit gradle-wrapper.properties file to set the version of gradle.wrapper
+- Execute gradle wrapper to create .jar and gradlew/.bat
+- Execute gradlew/.bat build or gradle test to run the test
