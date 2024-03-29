@@ -19,9 +19,9 @@ dependencies {
 
 test {
     useJUnitPlatform()
-    systemProperty "karate.options", System.properties.getProperty("karate.options")
-    systemProperty "karate.env", System.properties.getProperty("karate.env")
-    systemProperty "baseUrl", System.properties.getProperty("baseUrl")
-    systemProperty "namespace", System.properties.getProperty("namespace")
+    systemProperty "karate.options", System.properties.getProperty("karate.optionsCLI")
+    systemProperty "karate.env", System.properties.getProperty("karate.envCLI")
+    systemProperty "urlBaseGlobal", System.properties.getProperty("urlBaseCLI")
+    systemProperty "namespaceGlobal", System.properties.getProperty("namespaceCLI")
     outputs.upToDateWhen { false }
 }
