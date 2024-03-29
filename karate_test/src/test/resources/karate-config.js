@@ -3,15 +3,17 @@ function fn() {
     karate.configure('readTimeout', 5000);
     karate.configure('ssl', true);
 
-    var urlBase = karate.properties['baseUrl'] || 'https://#{base}#' || 'https://reqres.in/'
-    var namespace = karate.properties['namespace'] || 'api/#{service}#' || '/api/users'
+    var urlBase = karate.properties['urlBaseGlobal'] || 'https://#{base}#'
+    var namespace = karate.properties['namespaceGlobal'] || 'api/#{service}#'
 
     return {
         api: {
-            localUrlBase: 'https://reqres.in//api/users'//urlBase + '/'+namespace
+            localUrlBase: urlBase + '/'+ namespace //'https://reqres.in/api/users'
         },
         path: {
             listUser: '/?page=2',
+            userNotFound: '/23',
+            updateUser: '/2'
         }
     };
 }

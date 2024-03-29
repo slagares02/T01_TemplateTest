@@ -1,4 +1,8 @@
 Gradle:
 - Edit gradle-wrapper.properties file to set the version of gradle.wrapper
 - Execute gradle wrapper to create .jar and gradlew/.bat
-- Execute gradlew/.bat build or gradle test to run the test
+- Execute "gradlew/.bat build" or "gradle test" to run the test
+- Execute "gradle test -DurlBaseCLI=https://reqres.in -DnamespaceCLI=api/users -Dkarate.optionsCLI="--tags ~@SuccessFullListUser"" --info
+    -DurlBaseCLI -DnamespaceCLI -Dkarate.optionsCLI are variables defined in "build.gradle" file
+    ~@someOne : skipt this tag on feature or scenario
+    --info shows console log
