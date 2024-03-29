@@ -6,3 +6,8 @@ Gradle:
     -DurlBaseCLI -DnamespaceCLI -Dkarate.optionsCLI are variables defined in "build.gradle" file
     ~@someOne : skipt this tag on feature or scenario
     --info shows console log
+
+Npm:
+npm install
+npx playwright test -- debug --headed para levantar navegador y debugger
+npm run acceptancetest para ejecutar scripts en package.json

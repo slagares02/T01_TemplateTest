@@ -2,7 +2,7 @@ import { PlaywrightTestConfig} from '@playwright/test';
 
   const playwrightConfig: PlaywrightTestConfig = {
     testMatch: '/tests/*.ts',
-    //testIgnore: 'acceptancetest/test/Movements.spec.ts',
+    //testIgnore: 'acceptancetest/test/Mytest.spec.ts',
     reporter: [['list'], ['junit', { outputFile: 'reports/results.xml' }]],
     timeout: 60000, //ms
     //fullyParallel: true,
@@ -19,7 +19,7 @@ import { PlaywrightTestConfig} from '@playwright/test';
       },
     ],
     use: {
-      baseURL: 'https://www.utest.com/',
+      baseURL: 'https://reqres.in/',
       screenshot: 'only-on-failure',
       video: 'retry-with-video',
     },
