@@ -11,7 +11,7 @@ test.describe('User want to sort a product', () => {
   });
   
   test(`Given user want to sort a product 
-    When user select "female" and "watch"
+    When user select "Mujer" and "Relojes"
     Then user can see the list of watches`, async ({ page }) => {
     const sortObjectPage = new SortPage(page);
     await sortObjectPage.moveMouseOverFamale();

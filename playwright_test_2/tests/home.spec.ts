@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { HomePage } from '../src/pages/HomePage';
 
-test.describe('@t  Go to home page', () => {
+test.describe('Go to home page', () => {
 
   test.beforeEach(async ({ page, isMobile }) => {
     const homePage = new HomePage(page, isMobile)
@@ -9,7 +9,7 @@ test.describe('@t  Go to home page', () => {
     
   });
   
-  test(`Given user want to enter to web home page
+  test(`Given user want to enter to Dafiti's home page
     When user browser to https://www.dafiti.com.co
     Then user can see the store logo`, async ({ page, isMobile }) => {
     const homeObjectPage = new HomePage(page, isMobile);

@@ -2,9 +2,10 @@ import { Page } from 'playwright';
   export class HomePage {
       readonly page: Page;
       readonly resize: any;
+      
       constructor(page: Page, isMobile: boolean) {
         this.page = page;
-        this.resize = isMobile? false: page.setViewportSize({ width: 1920, height: 1080 });
+        this.resize = isMobile? false: page.setViewportSize({ width: 1200, height: 900 });
         }
 
       async goToHome() {

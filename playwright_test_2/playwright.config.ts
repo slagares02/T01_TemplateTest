@@ -1,13 +1,13 @@
 import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './tests',
-  grep: new RegExp('@t'), //Just for local debug
-  timeout: 20000,
+  //grep: new RegExp('@t'), //Just for local debug
+  timeout: 40000,
   reporter: [['list'],['monocart-reporter', {name: "Test Report", outputFile: 'test-results/index.html'}]],
   //reporter: [['html', { open: 'always', outputFolder: 'test-results'  }]],
   fullyParallel: true,
   retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : 4,
+  workers: process.env.CI ? 1 : 1,
   use: {
     baseURL: 'https://www.dafiti.com.co/',
   },
@@ -17,7 +17,7 @@ export default defineConfig({
 
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'], launchOptions:{args: ['--window-size=1440,900']}},
+      use: { ...devices['Desktop Chrome']},
     },
     
   /*
@@ -52,12 +52,12 @@ export default defineConfig({
     name: 'Mobile Chrome',
     use: { ...devices['Moto G4'] },
     }
-   
+   */
   {
    name: 'Mobile Safari',
    use: { ...devices['iPhone 12'] },
    }
-*/
+
   ],
 
   /* Run your local dev server before starting the tests */
