@@ -1,0 +1,18 @@
+{
+  "name": "playwright_test_2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "home_test": "npx playwright test tests/home.spec.ts",
+    "sort_test": "npx playwright test tests/sort_product.spec.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.10.1",
+    "monocart-reporter": "^2.9.12"
+  }
+}
